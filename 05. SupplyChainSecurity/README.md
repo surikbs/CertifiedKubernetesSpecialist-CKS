@@ -2,7 +2,7 @@
 
 
 ## Static Analysis of user workloads 
-   ### Docker file.
+   ### Docker file
     - USER root : The container process runs as Root by default. Its usually a good practice to avoid this. 
         Make sure that the final USER directive in the dockerfile is not set to root or 0.
     - :latest tag : Try to avoid using the :latest tag in the FROM directive of your docker file. 
