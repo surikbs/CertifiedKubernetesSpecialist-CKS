@@ -58,4 +58,24 @@ CIS Center for Internet Security is a non-profit organization  dedicated to prom
 - the config file for the control plane components (eg. API Server, etcd etc) can be found in /etc/kubernetes/manifests on the controlplane servers.
 
 wget -O kubebench-control-plane.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-master.yaml
+
 wget -O kubebench-node.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-node.yaml
+
+## Implementing TLS with Ingress
+
+Ingress may provide load balancing, SSL termination and name-based virtual hosting. Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource.
+
+External user ------ (https://) ----------> Ingress ----------(http://) --------------> Service
+
+openssl req -x509 -new -keyout ingress-tls.key -subj "/CN=ingress.test" -days 10000 -out ingress-tls.crt
+
+## Securing Node Endpoints
+Be aware of what ports your nodes are using. Use Network segmentation and firewalls to keep them safe.
+
+ControlPlane ports
+- Ports     | Purpose
+- 6443      | Kubernetes API server
+- 2379-2380 | etcd
+- 10250     | kubelet API
+- 10251     | kube-scheduler
+- 10252     | kube-controller-manager    
