@@ -38,3 +38,9 @@ link: https://kubernetes.io/docs/concepts/services-networking/network-policies/#
     - ports: determine which port(s) will allow traffic for the rule.
     - to/from selectors determine the source and destination of allowed traffic
 
+Example: Accessing a nginx pod from a client pod with default deny policy inplace within the namespace. The client will not be able to access the nginx pod.
+- We will have to create two policy types: both ingress and egress.
+
+    Client pod -> Egress Rule -------------------------> Nginx Pod (outgoing traffic from client pod)
+    Client pod --------------------------Ingress Rule -> Nginx pod (incoming traffic to Nginx Pod)
+
