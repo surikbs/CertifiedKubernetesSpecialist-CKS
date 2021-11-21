@@ -79,3 +79,14 @@ ControlPlane ports
 - 10250     | kubelet API
 - 10251     | kube-scheduler
 - 10252     | kube-controller-manager    
+
+Worker Node Listening Ports (kubeadm defaults)
+- 10250 | kubelet API
+- 30000-32767 | NodePort 
+
+## Securing GUI Elements
+
+Kubernetes Dashboard
+If you are using any kind of GUI interfaces for kubernetes, make sure that you keep them secure.
+
+## Verifying Kubernetes Platform Binaries
