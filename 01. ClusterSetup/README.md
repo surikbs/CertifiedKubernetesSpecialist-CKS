@@ -45,5 +45,17 @@ Example: Accessing a nginx pod from a client pod with default deny policy inplac
 
     Client pod --------------------------Ingress Rule --> Nginx pod (incoming traffic to Nginx Pod)
 
+Very Important: https://kubernetes.io/docs/concepts/services-networking/network-policies/#behavior-of-to-and-from-selectors
 
-## CIS Benchmark
+
+## CIS Benchmark with kube-bench
+
+CIS Center for Internet Security is a non-profit organization  dedicated to promoting digital Security. CIS benchmarks are a set of concensus-driven community standards and best practices for securing systems.
+
+### Fixing Security issues detected by CIS benchmark
+- The CIS Benchmark output includes remediation steps which you can use to address issues.
+- kubeadm clusters use a kubelet config file /var/lib/kubelet/config.yaml
+- the config file for the control plane components (eg. API Server, etcd etc) can be found in /etc/kubernetes/manifests on the controlplane servers.
+
+wget -O kubebench-control-plane.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-master.yaml
+wget -O kubebench-node.yaml https://raw.githubusercontent.com/aquasecurity/kube-bench/main/job-node.yaml
