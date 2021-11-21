@@ -90,3 +90,11 @@ Kubernetes Dashboard
 If you are using any kind of GUI interfaces for kubernetes, make sure that you keep them secure.
 
 ## Verifying Kubernetes Platform Binaries
+kubernetes provides checksum files for their binaries. The checksum  contains a hash calculated from the contents of a valid binary file.
+
+# Revisit
+- NetworkPolicies
+- CIS Benchmarks
+- Ingress tls
+- Secure GUI tools
+- Verify Binaries
