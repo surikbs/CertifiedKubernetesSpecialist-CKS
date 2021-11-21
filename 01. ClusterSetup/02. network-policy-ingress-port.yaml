@@ -16,7 +16,7 @@ spec:
           project: myproject
       podSelector:
         matchLabels:
-          role: nginx
+          role: client
     ports:
     - protocol: TCP
       port: 80
