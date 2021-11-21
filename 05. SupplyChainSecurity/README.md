@@ -3,8 +3,11 @@
 
 ## Static Analysis of user workloads 
    ### Docker file.
-    -  USER root : The container process runs as Root by default. Its usually a good practice to avoid this. Make sure that the final USER directive in the dockerfile is not set to root or 0.
-    - :latest tag : Try to avoid using the :latest tag in the FROM directive of your docker file. Instead, reference to a specific, versioned tag.
+    -  USER root : The container process runs as Root by default. 
+        Its usually a good practice to avoid this. 
+        Make sure that the final USER directive in the dockerfile is not set to root or 0.
+    - :latest tag : Try to avoid using the :latest tag in the FROM directive of your docker file. 
+        Instead, reference to a specific, versioned tag.
     - Unnecessary software: do not install unnecessary softwares.
     - Sensitive data: use kubernetes secrets to pass sensitive data to the container at the runtime.
 
