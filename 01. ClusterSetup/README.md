@@ -42,5 +42,5 @@ Example: Accessing a nginx pod from a client pod with default deny policy inplac
 - We will have to create two policy types: both ingress and egress.
 
     Client pod -> Egress Rule -------------------------> Nginx Pod (outgoing traffic from client pod)
+    
     Client pod --------------------------Ingress Rule -> Nginx pod (incoming traffic to Nginx Pod)
-
