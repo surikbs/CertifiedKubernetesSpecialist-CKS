@@ -5,7 +5,7 @@
 - Attack Surfaces (openports, GUI and others)
 - Verifying K8s binaries
 
-### Network Policies
+## Network Policies
 - NetworkPolicies are an application-centric construct which allow you to specify how a pod is allowed to communicate with various network "entities" over the network
 - By default, if no policies exist in a namespace, then all ingress and egress traffic is allowed to and from pods in that namespace. The following examples let you change the default behavior in that namespace.
 #### Restricting Default Access with NetworkPolicies
@@ -44,3 +44,6 @@ Example: Accessing a nginx pod from a client pod with default deny policy inplac
     Client pod -> Egress Rule -------------------------> Nginx Pod (outgoing traffic from client pod)
 
     Client pod --------------------------Ingress Rule --> Nginx pod (incoming traffic to Nginx Pod)
+
+
+## CIS Benchmark
