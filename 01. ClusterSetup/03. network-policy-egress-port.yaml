@@ -8,9 +8,9 @@ spec:
     matchLabels:
       role: db
   policyTypes:
-  - Ingress
-  ingress:
-  - from:
+  - Egress
+  egress:
+  - to:
     - namespaceSelector:
         matchLabels:
           project: myproject
