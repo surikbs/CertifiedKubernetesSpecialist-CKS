@@ -57,3 +57,5 @@
    - Intercept requests to the kube API before objects are created. It allows, prevent or make changes to the objects before creating.
    - Allows to use custom logic to approve or deny the creation of workloads.
    - you can use external applications as admission controller to scan images for vulnerabilities automatically as workloads get created.
+   - use --enable-admission-plugins to enable ImagePolicyWebhook admission controller.
+   - user --admission-control-config-file to specify the location of the admission controller config file.
