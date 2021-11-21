@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: default
+  namespace: dep-reader-role
+rules:
+- apiGroups: [""]
+  resource: ["deployments"]
+  verbs: ["get", "list"]

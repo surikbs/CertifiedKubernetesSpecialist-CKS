@@ -18,4 +18,4 @@
 - SA give pods access to kube API. Their permissions are governed by the regular RBAC objects.  
 ##### Restricting Service Accounts Permissions
 ##### Restricting Access to kubernetes API
-- The kubernetes API is a http interface 
+- The kubernetes API is a http interface. Limit network access to the API using network segementation/firewalls.
