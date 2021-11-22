@@ -1,0 +1,22 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cr-rb-podsecurity-policy
+  namespace: <pod namespaces>
+roleRef:
+  kind: ClusterRole
+  name: cr-podsecurity-policy
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+# Authorize all service accounts in a namespace (recommended):
+- kind: Group
+  apiGroup: rbac.authorization.k8s.io
+  name: system:serviceaccounts:<authorized namespace>
+# Authorize specific service accounts (not recommended):
+- kind: ServiceAccount
+  name: sa-podsecurity-policy
+  namespace: <authorized pod namespace>
+# Authorize specific users (not recommended):
+- kind: User
+  apiGroup: rbac.authorization.k8s.io
+  name: <authorized user name>
