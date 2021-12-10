@@ -86,4 +86,3 @@ kubectl get csr
 kubectl certificate approve myuser
 kubectl get csr/myuser -o yaml
 kubectl get csr myuser -o jsonpath='{.status.certificate}'| base64 -d > myuser.crt
-
